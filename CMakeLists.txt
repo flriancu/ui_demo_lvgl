@@ -25,7 +25,7 @@ endif()
 #   project setup
 #-------------------------------------------------------------------------------
 
-set(target_name lv_port_pc_vscode)
+set(target_name ui_demo_lvgl)
 
 project(${target_name} C)
 
