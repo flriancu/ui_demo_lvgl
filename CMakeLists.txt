@@ -35,7 +35,7 @@ find_package(SDL2 CONFIG REQUIRED)
 #   lvgl setup
 #-------------------------------------------------------------------------------
 
-set(LV_CONF_PATH ${CMAKE_CURRENT_LIST_DIR}/lv_conf.h)
+set(LV_CONF_PATH ${CMAKE_CURRENT_LIST_DIR}/conf/lv_conf.h)
 
 add_subdirectory(lvgl)
 
@@ -54,6 +54,10 @@ target_sources(${target_name} PRIVATE
     src/mouse_cursor_icon.c
     src/platform.h
     src/platform.c
+)
+
+target_include_directories(${target_name} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}
 )
 
 target_link_libraries(${target_name} PRIVATE
